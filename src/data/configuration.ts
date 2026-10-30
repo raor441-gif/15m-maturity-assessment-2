@@ -162,21 +162,21 @@ export const COMPANIES: CompanyProfile[] = [
 ];
 
 export const MODULES: ModuleDefinition[] = [
-  { id: 'M1', code: 'M1', name: 'Strategic Procurement Objectives', partitionId: 'SP1' },
-  { id: 'M2', code: 'M2', name: 'Cost & Financial Optimization', partitionId: 'SP1' },
-  { id: 'M3', code: 'M3', name: 'Value Differentiation & ESG', partitionId: 'SP1' },
-  { id: 'M4', code: 'M4', name: 'Strategic Framework & Guidelines', partitionId: 'SP1' },
-  { id: 'M5', code: 'M5', name: 'Category Spend & Demand Analysis', partitionId: 'SP2' },
-  { id: 'M6', code: 'M6', name: 'Category Strategy Process', partitionId: 'SP2' },
-  { id: 'M7', code: 'M7', name: 'Sourcing Levers & TCO', partitionId: 'SP2' },
-  { id: 'M8', code: 'M8', name: 'Cross-functional Collaboration', partitionId: 'SP2' },
-  { id: 'M9', code: 'M9', name: 'Supplier Evaluation & Objectives', partitionId: 'SP3' },
-  { id: 'M10', code: 'M10', name: 'Supplier Potential & Classification', partitionId: 'SP3' },
-  { id: 'M11', code: 'M11', name: 'Supplier Strategies & SRM', partitionId: 'SP3' },
-  { id: 'M12', code: 'M12', name: 'Source-to-Contract (S2C)', partitionId: 'SP4' },
-  { id: 'M13', code: 'M13', name: 'Procure-to-Pay (P2P)', partitionId: 'SP4' },
-  { id: 'M14', code: 'M14', name: 'AI & Spend Analytics', partitionId: 'SP4' },
-  { id: 'M15', code: 'M15', name: 'Procurement Controlling & KPIs', partitionId: 'SP5' },
+  { id: 'M1', code: 'M01', name: 'Define value contribution targets', partitionId: 'SP1' },
+  { id: 'M2', code: 'M02', name: 'Formulate Procurement Policies', partitionId: 'SP1' },
+  { id: 'M3', code: 'M03', name: 'Execute strategic analysis', partitionId: 'SP1' },
+  { id: 'M4', code: 'M04', name: 'Formulate strategic direction', partitionId: 'SP1' },
+  { id: 'M5', code: 'M05', name: 'Analyze & segment Categories', partitionId: 'SP2' },
+  { id: 'M6', code: 'M06', name: 'Define category targets', partitionId: 'SP2' },
+  { id: 'M7', code: 'M07', name: 'Analyze levers', partitionId: 'SP2' },
+  { id: 'M8', code: 'M08', name: 'Formulate category strategy', partitionId: 'SP2' },
+  { id: 'M9', code: 'M09', name: 'Evaluate suppliers', partitionId: 'SP3' },
+  { id: 'M10', code: 'M10', name: 'Identify, prequalify & release new suppliers', partitionId: 'SP3' },
+  { id: 'M11', code: 'M11', name: 'Classify suppliers & formulate supplier targets & strategy', partitionId: 'SP3' },
+  { id: 'M12', code: 'M12', name: 'Process Design', partitionId: 'SP4' },
+  { id: 'M13', code: 'M13', name: 'Digitalization & AI Strategies', partitionId: 'SP4' },
+  { id: 'M14', code: 'M14', name: 'Performance Management', partitionId: 'SP5' },
+  { id: 'M15', code: 'M15', name: 'Target Operating Model', partitionId: 'SP5' },
 ];
 
 export const ASSESSMENT_FUNCTIONS: AssessmentFunction[] = [

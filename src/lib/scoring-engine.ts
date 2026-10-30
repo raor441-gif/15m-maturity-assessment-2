@@ -16,7 +16,7 @@ export const STRATEGIC_PARTITIONS: StrategicPartition[] = [
   {
     id: 'SP1',
     code: 'SP1',
-    name: 'Framework Strategy',
+    name: 'Procurement Framework Strategy',
     weight: 0.25,
     description: 'Procurement mission, value contribution targets, cost, differentiation, sustainability and strategic guidelines.',
     iconName: 'Building2',
@@ -40,17 +40,17 @@ export const STRATEGIC_PARTITIONS: StrategicPartition[] = [
   {
     id: 'SP4',
     code: 'SP4',
-    name: 'Process & Digital Strategies',
+    name: 'Process / Digital Strategies',
     weight: 0.15,
-    description: 'Digitalization, automation, P2S, S2C, SRM, P2P, contract management and analytics infrastructure.',
+    description: 'Digitalization, automation, process design, AI, contract management and digital infrastructure.',
     iconName: 'Cpu',
   },
   {
     id: 'SP5',
     code: 'SP5',
-    name: 'Performance Management',
+    name: 'Procurement Management System',
     weight: 0.10,
-    description: 'KPI framework, savings & value measurement, procurement controlling, reporting and governance.',
+    description: 'Performance management, Target Operating Model (TOM), savings & value measurement, controlling and governance.',
     iconName: 'BarChart3',
   },
 ];

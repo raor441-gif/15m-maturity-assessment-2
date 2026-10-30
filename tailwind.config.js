@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['DINPro', 'system-ui', '-apple-system', 'sans-serif'],
+        din: ['DINPro', 'sans-serif'],
+      },
       colors: {
         brand: {
           teal: {

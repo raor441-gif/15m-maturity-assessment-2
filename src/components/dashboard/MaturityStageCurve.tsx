@@ -13,7 +13,9 @@ import {
   ArrowRight,
   Target,
   Maximize2,
-  Eye
+  Eye,
+  Disc3,
+  TrendingUp
 } from 'lucide-react';
 
 export const MaturityStageCurve: React.FC = () => {
@@ -24,7 +26,7 @@ export const MaturityStageCurve: React.FC = () => {
   ) || STAGES[1];
 
   const [selectedStage, setSelectedStage] = useState<number>(currentStage.number);
-  const [viewMode, setViewMode] = useState<'interactive' | 'authentic'>('interactive');
+  const [viewMode, setViewMode] = useState<'interactive' | 'concentric' | 'curve'>('interactive');
 
   const activeStageData = STAGES.find((s) => s.number === selectedStage) || currentStage;
 
@@ -123,24 +125,56 @@ export const MaturityStageCurve: React.FC = () => {
               Interactive Analysis
             </button>
             <button
-              onClick={() => setViewMode('authentic')}
+              onClick={() => setViewMode('concentric')}
               className={`px-3 py-1 rounded-md transition ${
-                viewMode === 'authentic'
+                viewMode === 'concentric'
                   ? 'bg-white text-teal-800 shadow-2xs font-bold'
                   : 'text-slate-600 hover:text-slate-900'
               }`}
             >
-              Methodology Curve
+              Concentric Rings
+            </button>
+            <button
+              onClick={() => setViewMode('curve')}
+              className={`px-3 py-1 rounded-md transition ${
+                viewMode === 'curve'
+                  ? 'bg-white text-teal-800 shadow-2xs font-bold'
+                  : 'text-slate-600 hover:text-slate-900'
+              }`}
+            >
+              Progression Curve
             </button>
           </div>
         </div>
       </div>
 
       {/* Main Visual Display */}
-      {viewMode === 'authentic' ? (
+      {viewMode === 'concentric' ? (
+        <div className="mt-5 space-y-4">
+          <div className="rounded-xl overflow-hidden border border-slate-200 relative bg-slate-950 p-4 shadow-inner group flex items-center justify-center">
+            {/* The circular concentric image from Maturity.png */}
+            <img
+              src="/images/Maturity.png"
+              alt="Final Maturity Scoring Concentric Model"
+              className="w-full h-auto object-contain max-h-[500px] mx-auto opacity-95 transition group-hover:scale-[1.01]"
+            />
+
+            {/* Dynamic Live Score Marker Overlay */}
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-slate-900/95 text-white border border-teal-400 px-4 py-2 rounded-xl backdrop-blur-md shadow-xl flex items-center space-x-3 text-xs">
+              <div className="w-3 h-3 rounded-full bg-teal-400 animate-ping" />
+              <div>
+                <span className="text-slate-400 text-[10px] uppercase font-bold block">Current Verified Position</span>
+                <span className="font-extrabold text-teal-300">
+                  {currentCompany.name}: {currentScore}% (Stage {currentStage.number}: {currentStage.name})
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      ) : viewMode === 'curve' ? (
         <div className="mt-5 space-y-4">
           <div className="rounded-xl overflow-hidden border border-slate-200 relative bg-slate-900 shadow-inner group">
-            {/* The authentic image from Screenshot 3 */}
+            {/* The authentic linear curve image */}
             <img
               src="/images/maturity-curve.png"
               alt="Final Maturity Scoring 5-Stage Methodology Curve"
@@ -148,9 +182,7 @@ export const MaturityStageCurve: React.FC = () => {
             />
 
             {/* Dynamic Live Score Marker Overlay */}
-            <div
-              className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-slate-900/90 text-white border border-teal-400 px-4 py-2 rounded-xl backdrop-blur-md shadow-xl flex items-center space-x-3 text-xs"
-            >
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-slate-900/90 text-white border border-teal-400 px-4 py-2 rounded-xl backdrop-blur-md shadow-xl flex items-center space-x-3 text-xs">
               <div className="w-3 h-3 rounded-full bg-teal-400 animate-ping" />
               <div>
                 <span className="text-slate-400 text-[10px] uppercase font-bold block">Current Verified Position</span>

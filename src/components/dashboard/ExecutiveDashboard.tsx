@@ -3,6 +3,7 @@
 import React from 'react';
 import { ExecutiveSummaryCards } from './ExecutiveSummaryCards';
 import { MaturityStageCurve } from './MaturityStageCurve';
+import { HouseOfProcurement } from './HouseOfProcurement';
 import { StrategicPartitionBarChart } from './StrategicPartitionBarChart';
 import { MultiViewRadars } from './MultiViewRadars';
 import { useAssessment } from '@/context/AssessmentContext';
@@ -21,10 +22,13 @@ export const ExecutiveDashboard: React.FC = () => {
       {/* 1. Top KPI Summary */}
       <ExecutiveSummaryCards />
 
-      {/* 2. Final Maturity 5-Stage Visual Curve */}
+      {/* 2. Final Maturity 5-Stage Visual Curve & Concentric Rings */}
       <MaturityStageCurve />
 
-      {/* 3. Charts Grid: SP Bar Chart & Multi-View Radars */}
+      {/* 3. The House of 15M Maturity Assessment Architecture */}
+      <HouseOfProcurement />
+
+      {/* 4. Charts Grid: SP Bar Chart & Multi-View Radars */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <StrategicPartitionBarChart />
         <MultiViewRadars />
